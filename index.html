@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anandmaral.com</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:#020408;
+    font-family:'Rajdhani',sans-serif;
+    color:#e8f4ff;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background-image:
+      radial-gradient(1px 1px at 10% 20%,rgba(0,245,255,.6) 0%,transparent 100%),
+      radial-gradient(1px 1px at 30% 60%,rgba(255,0,110,.4) 0%,transparent 100%),
+      radial-gradient(1px 1px at 60% 10%,rgba(255,215,0,.5) 0%,transparent 100%),
+      radial-gradient(1px 1px at 80% 80%,rgba(0,245,255,.3) 0%,transparent 100%);
+    pointer-events:none;
+  }
+  body::after{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.08) 2px,rgba(0,0,0,.08) 4px);
+    pointer-events:none;
+    animation:scan 8s linear infinite;
+  }
+  @keyframes scan{0%{background-position:0 0}100%{background-position:0 40px}}
+  .container{
+    text-align:center;
+    padding:40px 20px;
+    position:relative;
+    z-index:1;
+  }
+  .logo{
+    font-family:'Orbitron',monospace;
+    font-size:clamp(28px,6vw,56px);
+    font-weight:900;
+    background:linear-gradient(135deg,#00f5ff 0%,#fff 40%,#ff006e 80%,#ffd700 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    filter:drop-shadow(0 0 30px rgba(0,245,255,.4));
+    animation:pulse 3s ease-in-out infinite;
+    margin-bottom:24px;
+    letter-spacing:2px;
+  }
+  @keyframes pulse{
+    0%,100%{filter:drop-shadow(0 0 20px rgba(0,245,255,.5))}
+    50%{filter:drop-shadow(0 0 50px rgba(0,245,255,.9)) drop-shadow(0 0 80px rgba(255,0,110,.4))}
+  }
+  .coming-soon{
+    font-family:'Orbitron',monospace;
+    font-size:clamp(14px,3vw,22px);
+    font-weight:700;
+    letter-spacing:6px;
+    color:#00f5ff;
+    text-transform:uppercase;
+    text-shadow:0 0 20px rgba(0,245,255,.6);
+    margin-bottom:16px;
+    animation:blink 2s ease-in-out infinite;
+  }
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.6}}
+  .exclaim{
+    font-size:clamp(20px,4vw,32px);
+    color:#ffd700;
+    text-shadow:0 0 16px rgba(255,215,0,.6);
+  }
+  .divider{
+    width:120px;
+    height:2px;
+    background:linear-gradient(90deg,transparent,#00f5ff,transparent);
+    margin:28px auto;
+  }
+  .sub{
+    font-size:15px;
+    color:#5a7a9a;
+    letter-spacing:3px;
+    text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">ANANDMARAL</div>
+    <div class="coming-soon">Everything is <span class="exclaim">Coming Soon!!!</span></div>
+    <div class="divider"></div>
+    <div class="sub">Шинэчлэгдэж байна</div>
+  </div>
+</body>
+</html>
